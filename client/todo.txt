@@ -1,0 +1,39 @@
+- (page) join with name, pic (optional)
+input name
+note before join
+
+- header
+left: pic, name
+right: Quit and goto join with name
+
+- modal create room
+
+- popup request
+
+- request to calling
+
+- (page) Home
++ list of friends online
+friend: pic, name
+actions: video, voice, chat
++ rooms
+btn create room
+room name (link to room)
+
+- (page) calling
+
+
+- (page) video
+
+
+- (page) room video
+
+
+- (page) voice
+
+
+- (page) chat
+
+
+- (page) room chat
+
