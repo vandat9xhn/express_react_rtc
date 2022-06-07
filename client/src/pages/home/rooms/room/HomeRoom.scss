@@ -1,0 +1,27 @@
+.HomeRoom {
+  padding: 8px;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+// ----
+.HomeRoom_room {
+  margin-bottom: 5px;
+  height: 48px;
+
+  font-weight: 500;
+}
+
+// ----
+.HomeRoom_actions {
+  display: flex;
+  align-items: center;
+}
+
+.HomeRoom_action {
+  margin-right: 10px;
+  cursor: pointer;
+}

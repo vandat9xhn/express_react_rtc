@@ -1,0 +1,26 @@
+.HomeFriend {
+  padding: 8px;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+// ----
+.HomeFriend_friend {
+  margin-bottom: 5px;
+  height: 48px;
+  font-weight: 500;
+}
+
+// -----
+.HomeFriend_actions {
+  display: flex;
+  align-items: center;
+}
+
+.HomeFriend_action {
+  margin-right: 10px;
+  cursor: pointer;
+}

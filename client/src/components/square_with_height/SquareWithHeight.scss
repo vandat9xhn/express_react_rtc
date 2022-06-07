@@ -1,0 +1,21 @@
+.SquareWithHeight {
+  display: flex;
+  height: 100%;
+}
+
+.SquareWithHeight_contain {
+  position: relative;
+  height: 100%;
+}
+
+.SquareWithHeight_svg {
+  height: 100%;
+}
+
+.SquareWithHeight_children {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

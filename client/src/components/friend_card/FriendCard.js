@@ -2,6 +2,8 @@ import React from 'react';
 
 import { DEFAULT_PICTURE } from '../../const/fakeServer';
 
+import SquareWithHeight from '../square_with_height/SquareWithHeight';
+
 import './FriendCard.scss';
 
 //
@@ -9,17 +11,15 @@ function FriendCard({ name, picture }) {
   //
   return (
     <div className="FriendCard">
-      <div className="FriendCard_row">
+      <SquareWithHeight>
         <img
           className="FriendCard_pic"
           src={picture || DEFAULT_PICTURE}
-          width="60"
-          height="60"
           alt=""
         />
+      </SquareWithHeight>
 
-        <div className="FriendCard_name">{name}</div>
-      </div>
+      <div className="FriendCard_name">{name}</div>
     </div>
   );
 }

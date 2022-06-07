@@ -1,21 +1,16 @@
 .FriendCard {
-  padding: 8px 12px;
-  background-color: #fff;
-  box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 25%);
-}
-
-.FriendCard_row {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .FriendCard_pic {
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .FriendCard_name {
   margin-left: 12px;
-  font-weight: 500;
-  font-size: 17px;
 }

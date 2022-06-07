@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-import FriendCard from '../../../components/friend_card/FriendCard';
+import UserCard from '../../../components/user_card/UserCard';
 
 //
 function LoginForm({ name, picture, handleChangeName, handleChangePic }) {
@@ -36,7 +36,7 @@ function LoginForm({ name, picture, handleChangeName, handleChangePic }) {
 
       {/* preview */}
       <div>
-        <FriendCard name={name || 'Your name'} picture={picture} />
+        <UserCard name={name || 'Your name'} picture={picture} />
       </div>
     </div>
   );

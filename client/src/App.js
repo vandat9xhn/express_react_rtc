@@ -9,6 +9,7 @@ import './index.scss';
 
 import ContextAppComponent from './contextAPI/ContextAppComponent';
 import AppRouteComponent from './router/AppRouteComponent';
+import AppLayout from './layout/_main/AppLayout';
 
 //
 function App() {
@@ -41,7 +42,9 @@ function App() {
     <Router>
       <ContextAppComponent socket={refSocket.current}>
         <div className="App">
-          <AppRouteComponent />
+          <AppLayout>
+            <AppRouteComponent />
+          </AppLayout>
         </div>
       </ContextAppComponent>
     </Router>

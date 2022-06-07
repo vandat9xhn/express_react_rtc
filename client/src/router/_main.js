@@ -1,6 +1,6 @@
 import Home from '../pages/home/_main/Home';
 import Login from '../pages/login/_main/Login';
-import Video from '../pages/video/_main/Video';
+import VideoRoom from '../pages/video_room/_main/VideoRoom';
 import Voice from '../pages/voice/_main/Voice';
 
 //
@@ -15,8 +15,8 @@ export const AppRouters = [
     component: Login,
   },
   {
-    path: '/video',
-    component: Video,
+    path: '/video/:id',
+    component: VideoRoom,
   },
   {
     path: '/voice',

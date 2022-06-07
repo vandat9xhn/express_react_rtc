@@ -41,9 +41,8 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-// app.listen(3000);
+// app.listen(3001);
 
-//
 var http = require('http');
 var server = http.createServer(app);
 var { Server } = require('socket.io');
@@ -57,13 +56,17 @@ var io = new Server(server, {
 server.listen(3001);
 
 io.on('connection', (socket) => {
-  socket.on('sendData', (data) => {
-    console.log(data);
-    socket.emit('getData', data);
-  });
+  const nsp = io.of('rooms');
 
-  socket.on('disconnect', () => {
-    console.log('disconnect');
+  // socket.on('create_room', ({ name, picture, type, title }) => {});
+
+  socket.on('user-connected', (room_id, peer_user_id) => {
+    socket.join(room_id);
+    socket.broadcast.to(room_id).emit('user-connected', peer_user_id);
+
+    socket.on('disconnect', () => {
+      socket.broadcast.to(room_id).emit('user-disconnected', peer_user_id);
+    });
   });
 });
 

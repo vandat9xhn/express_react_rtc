@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+import { ContextApp } from '../../../contextAPI/ContextApp';
 
 import LoginForm from '../form/LoginForm';
 
@@ -9,6 +11,9 @@ import './Login.scss';
 function Login(props) {
   //
   const navigate = useNavigate();
+
+  //
+  const { setUser } = useContext(ContextApp);
 
   //
   const [name, setName] = useState('');
@@ -35,6 +40,7 @@ function Login(props) {
 
   //
   const handleJoin = () => {
+    setUser({ name: name, picture: picture });
     navigate('/home');
   };
 
